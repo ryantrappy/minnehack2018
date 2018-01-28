@@ -44,8 +44,8 @@ $( document ).ready(function() {
 
 /* A simple and scalable hamburger menu using css transitions. */
 function toggleMenu() {
-    if ($('.js-menu').hasClass('active')) {
-
+    alert("toggling");
+    if ($('.js-menu').hasClass('active')){
         $('.js-menu').removeClass('active');
         $('body').removeClass('menu-open');
     } else {
