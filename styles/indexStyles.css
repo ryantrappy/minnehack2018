@@ -10,6 +10,16 @@ html{
     margin-right: auto;
     /*border: solid 1px #000000;*/
 }
-h1{
-    text-align: center;
+.header{
+    background-color: #f42424;
+    color: #ffffff;
+}
+
+.footer{
+    background-color: #f42424;
+    color: #ffffff;
+}
+.footer .btn-link{
+    color: #ffffff;
+    text-decoration: underline;
 }
