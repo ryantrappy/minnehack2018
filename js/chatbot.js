@@ -55,7 +55,8 @@ function getNextResponseAndText(){
     if(text.length > 0){
         getNextResponse(text);
     }
-    $("#textEntry").val('')
+    $("#textEntry").val('');
+    $("#textEntry").focus();
 
 }
 
