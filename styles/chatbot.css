@@ -1,0 +1,40 @@
+.message {
+    border-radius: 50px;
+    margin: 0 15px 10px;
+    padding: 15px 20px;
+    position: relative;
+    font-weight: bold;
+}
+.to {
+    background-color: #2095FE;
+    color: #fff;
+    margin-left: 100px;
+    text-align: right;
+}
+.from {
+    background-color: #E5E4E9;
+    color: #363636;
+    margin-right: 100px;
+}
+.to + .to,
+.from + .from {
+    margin-top: -10px;
+}
+
+.chatWindow{
+    border: solid grey 1px;
+    margin:auto;
+    width: 45vw;
+    height: 75vh;
+    overflow: scroll;
+}
+.chatTextEntry{
+    width: 45vw;
+    margin: auto;
+}
+
+input.break {
+    word-wrap: break-word;
+    word-break: break-all;
+    height: 80px;
+}
