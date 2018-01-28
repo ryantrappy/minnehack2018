@@ -24,9 +24,10 @@
 .chatWindow{
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+    padding-top: 10px;
     width: 90%;
-    height: 50%;
+    height: 70%;
     overflow: scroll;
     background-color: #ffffff;
 }
@@ -37,7 +38,8 @@
 #textEntry{
     overflow:hidden;
     resize:none;
-    width: 90%;
+    width: 100%;
+    color: #000000;
 }
 
 input.break {
