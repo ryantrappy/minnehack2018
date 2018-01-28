@@ -9,13 +9,13 @@ $( document ).ready(function() {
             if(diagramSection == "arm1" || diagramSection == "arm2"){
                 diagramSection = "arm";
             }
-            var imgName = "./img/diagram/" + diagramSection + ".jpg";
-            $("#isHovered").html(diagramSection);
+            var imgName = "./img/diagram/" + diagramSection + ".png";
+            $("#locationReadout").html("Selected: " + diagramSection);
             $("#bodyDiagram").attr("src", imgName);
         },
         function () {
-            var imgName = "./img/diagram/default.jpg";
-            $("#isHovered").html("");
+            var imgName = "./img/diagram/default.png";
+            $("#locationReadout").html("&nbsp");
             $("#bodyDiagram").attr("src", imgName);
         });
 
