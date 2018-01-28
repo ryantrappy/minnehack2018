@@ -6,7 +6,7 @@
     <title>QuickSports First Aid</title>
 
     <!-- Begin CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/indexStyles.css">
     <link rel="stylesheet" href="./styles/chatbot.css">
 
@@ -17,28 +17,32 @@
     <div class="row text-center">
         <h1>QuickSports First Aid</h1>
     </div>
-    <button onclick="location.href='./chatbot.html'" type="button">Chatbot</button>
 
+    <div class="row text-center">
+        <p style="display:none">Area hovered: <span id="isHovered"></span>; Coordinates: <span id="coord"></span> </p>
+        <p style="margin-bottom: 0px;">Click or tap the injured area:</p>
+    </div>
     <div class="row">
+        <div id="tier1diagram">
             <map name="primary">
-                <area class="diagramSection" id="head" shape="poly" coords="134,27,109,38,117,83,121,101,155,101,167,61,157,32,134,27">
-                <area class="diagramSection" id="torso" shape="poly" coords="87,115,96,223,85,302,189,286,180,238,179,115,87,115">
-                <area class="diagramSection" id="arm1" shape="poly" coords="63,122,19,329,68,337,87,174,80,126,63,122">
-                <area class="diagramSection" id="arm2" shape="poly" coords="174,114,183,185,210,333,253,325,200,136,174,114">
-                <area class="diagramSection" id="legs" shape="poly" coords="83,305,109,525,90,562,116,571,134,544,166,571,185,555,170,508,189,313,83,305">
+                <area class="diagramSection" id="head" shape="poly" coords="120,20,93,35,101,92,138,92,146,58,140,29,120,20">
+                <area class="diagramSection" id="torso" shape="poly" coords="104,90,75,101,80,163,73,267,165,269,156,205,162,97,136,90,104,90">
+                <area class="diagramSection" id="arm1" shape="poly" coords="80,101,79,168,55,255,61,296,19,285,36,255,61,113,76,101,80,101">
+                <area class="diagramSection" id="arm2" shape="poly" coords="162,98,161,162,183,254,182,298,221,291,201,251,177,114,170,102,162,98">
+                <area class="diagramSection" id="legs" shape="poly" coords="73,270,92,459,77,500,107,500,121,475,141,500,161,485,145,488,167,270,73,270">
             </map>
             <img usemap="#primary" id="bodyDiagram"  src="img/diagram/default.jpg" alt="image">
+        </div>
+    </div>
+    <div class="row text-center">
+        <button class="btn btn-link" onclick="location.href='./chatbot.html'" type="button">Or skip right to the MedicBot</button>
+    </div>
 
-    </div>
-    <div class="row">
-        <p>Area hovered: <span id="isHovered"></span>; Coordinates: <span id="coord"></span> </p>
-    </div>
 </div>
 
 <!-- Begin scripts -->
 <script type="text/javascript" src="./js/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script type="text/javascript" src="./js/imageMapResizer.min.js"></script>
 <script type="text/javascript" src="./js/diagram.js"></script>
 <script type="text/javascript" src="./js/chatbot.js"></script>

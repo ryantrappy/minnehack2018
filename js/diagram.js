@@ -1,6 +1,8 @@
 $( document ).ready(function() {
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+        console.log("Viewing in mobile");
+    }
 
-    //Do action when 
     $(".diagramSection").hover(
         function () {
             var diagramSection = $( this ).attr("id");
@@ -20,15 +22,16 @@ $( document ).ready(function() {
     /*
      * Prints coordinates on image where clicked, only used for testing
      */
-    $("#bodyDiagram").click(function (e) {
+
+    $(".diagramSection").click(function (e) {
         var parentOffset = $(this).parent().offset();
         //or $(this).offset(); if you really just want the current element's offset
         var relX = e.pageX - parentOffset.left;
         var relY = e.pageY - parentOffset.top;
         $("#coord").html("X: " + relX + " Y: " + relY);
     });
-    $(".diagramSection").click(function (e) {
-        var parentOffset = $(this).parent().parent().offset();
+    $("#bodyDiagram").click(function (e) {
+        var parentOffset = $(this).parent().offset();
         //or $(this).offset(); if you really just want the current element's offset
         var relX = e.pageX - parentOffset.left;
         var relY = e.pageY - parentOffset.top;

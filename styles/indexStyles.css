@@ -1,13 +1,15 @@
+html{
+    height:100%;
+}
 #bodyDiagram{
-    max-height: 700px;
+    max-height: 525px;
     height: 80%;
     width: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    border: solid 1px #000000;
+    /*border: solid 1px #000000;*/
 }
 h1{
     text-align: center;
-    font-size: 1.5rem;
 }
