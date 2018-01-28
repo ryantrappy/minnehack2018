@@ -24,10 +24,10 @@ const config = {
   all: {
     env: process.env.NODE_ENV || 'development',
     root: path.join(__dirname, '..'),
-    port: process.env.PORT || 9000,
+    port: process.env.PORT ||9000,
     ip: process.env.IP || '0.0.0.0',
     apiRoot: process.env.API_ROOT || '/api',
-    masterKey: requireProcessEnv('MASTER_KEY'),
+    masterKey:"pihcBbK5BG2uUqNxwYlZv5wJNhQVW1F0",
     mongo: {
       options: {
         db: {
