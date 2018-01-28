@@ -1,6 +1,8 @@
 $( document ).ready(function() {
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+        console.log("Viewing in mobile");
+    }
 
-    //Do action when
     $(".diagramSection").hover(
         function () {
             var diagramSection = $( this ).attr("id");
