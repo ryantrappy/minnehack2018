@@ -46,6 +46,7 @@
                 <li><a href="prevention.html">Prevention Tips</a></li>
                 <!--<li><a href="stretching.html">Post-Injury Stretching</a></li>-->
                 <li><a href="copyright.html">Copyright + Disclaimer</a></li>
+                <li><a onclick="startVideoCall();">Start Video Call</a></li>
             </ul>
         </nav>
         <h4 class="no-margin">The bot that troubleshoots humans</h4>
@@ -66,13 +67,22 @@
         </div>
     </div>
     <div class="text-center footer">
-        <!--<button class="btn btn-link" onclick="location.href='./chatbot.html'" type="button">Or skip right to the AidBot</button>-->
-        <button id="toggleAidBot" class="btn btn-link" onclick="toggleFooter()" type="button">Open AidBot</button>
-        <div class="chatWindow text-left" id="chatWindow"></div>
-        <div class="chatTextEntry">
-            <textarea id="textEntry" name="text" rows="3" wrap="soft" placeholder="Type message here..."></textarea>
-            <br/>
-            <button class="btn btn-default" id="submitMessage" onclick="getNextResponseAndText();">Submit</button>
+        <div id="chat">
+            <button id="toggleAidBot" class="btn btn-link" onclick="toggleFooter()" type="button">Open AidBot</button>
+            <div class="chatWindow text-left" id="chatWindow"></div>
+            <div class="chatTextEntry">
+                <textarea id="textEntry" name="text" rows="3" wrap="soft" placeholder="Type message here..."></textarea>
+                <br/>
+                <button class="btn btn-default" id="submitMessage" onclick="getNextResponseAndText();">Submit</button>
+            </div>
+        </div>
+        <div id="video">
+            <iframe
+                    src="https://tokbox.com/embed/embed/ot-embed.js?embedId=c719fa0c-2b2e-4cb0-bfdb-771a48cddf00&room=DEFAULT_ROOM&iframe=true"
+                    width="95%"
+                    style="min-height: 70vh;"
+                    allow="microphone; camera"
+            ></iframe>
         </div>
     </div>
 </div>
