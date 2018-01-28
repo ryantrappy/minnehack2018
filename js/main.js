@@ -1,6 +1,48 @@
 $( document ).ready(function() {
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+
         console.log("Viewing in mobile");
+        $(".diagramSection").hover(
+            function () {
+                var diagramSection = $( this ).attr("id");
+                if(diagramSection == "arm1" || diagramSection == "arm2"){
+                    diagramSection = "arm";
+                }
+                var imgName = "./img/diagram/" + diagramSection + ".png";
+                $("#bodyDiagram").attr("src", imgName);
+                getNextResponse(diagramSection);
+
+                setTimeout(function(){
+                    toggleFooter();
+                    document.getElementById("textEntry").focus();
+                }, 800);
+
+            },
+            function () {
+                var imgName = "./img/diagram/default.png";
+                $("#bodyDiagram").attr("src", imgName);
+            }
+        );
+    }else{
+        $(".diagramSection").on("click",
+            function () {
+                var diagramSection = $( this ).attr("id");
+                if(diagramSection == "arm1" || diagramSection == "arm2"){
+                    diagramSection = "arm";
+                }
+                var imgName = "./img/diagram/" + diagramSection + ".png";
+                $("#bodyDiagram").attr("src", imgName);
+
+                getNextResponse(diagramSection);
+
+                setTimeout(function(){
+                    toggleFooter();
+                    document.getElementById("textEntry").focus();
+                    var imgName = "./img/diagram/default.png";
+                    $("#bodyDiagram").attr("src", imgName);
+                }, 800);
+
+            });
     }
 
     $("#textEntry").keydown(function (e) {
@@ -11,34 +53,13 @@ $( document ).ready(function() {
             if(text.length > 0){
                 getNextResponse(text);
             }
-            $("#textEntry").val('')
+            $("#textEntry").val('');
             return true;
         }
     });
 
-    $(".diagramSection").hover(
-        function () {
-            var diagramSection = $( this ).attr("id");
-            if(diagramSection == "arm1" || diagramSection == "arm2"){
-                diagramSection = "arm";
-            }
-            var imgName = "./img/diagram/" + diagramSection + ".png";
-            $("#locationReadout").html("Selected: " + diagramSection);
-            $("#bodyDiagram").attr("src", imgName);
-            getNextResponse(diagramSection);
 
-            setTimeout(function(){
-                toggleFooter();
-                document.getElementById("textEntry").focus();
-                }, 800);
 
-        },
-        function () {
-            var imgName = "./img/diagram/default.png";
-            $("#locationReadout").html("&nbsp");
-            $("#bodyDiagram").attr("src", imgName);
-        }
-    );
 
 });
 
@@ -62,7 +83,6 @@ function toggleFooter(){
         $(".footer").addClass("expanded").css("height", "90%");
         $('.js-menu').removeClass('active');
         $('body').removeClass('menu-open');
-        isActive = !isActive;
     }
 
 }

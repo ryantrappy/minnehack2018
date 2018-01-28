@@ -100,5 +100,6 @@ nav ul li {
     font-size: 2rem;
 }
 nav ul li:hover {
-    background: blue;
+    background: #f42424;
+    color: #fff;
 }
