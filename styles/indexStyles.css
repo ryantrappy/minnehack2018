@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Days+One|Sarpanch:600');
-
-html{
-    height:100%;
+html, body{
+    height: 100vh;
+}
+.container-fluid{
+    position: relative;
 }
 #bodyDiagram{
     max-height: 525px;

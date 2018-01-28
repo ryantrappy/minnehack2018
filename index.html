@@ -27,43 +27,53 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/indexStyles.css">
     <link rel="stylesheet" href="./styles/chatbot.css">
-
+    <link rel="stylesheet" href="./styles/hamburger.css">
 </head>
 <body>
 
 <div class="container-fluid">
     <div class="row text-center header">
         <h1>QuickAid</h1>
+        <button id="hamburger" class="js-menu menu" type="button">
+            <span class="bar"></span>
+        </button>
+
+        <nav>
+            <ul>
+                <li>Common Injuries</li>
+                <li>Prevention Tips</li>
+                <li>Post-Injury Stretching</li>
+                <li>Copyright + Displaimer</li>
+            </ul>
+        </nav>
         <h4 class="no-margin">The bot that troubleshoots humans</h4>
         <p style="display:none">Area hovered: <span id="isHovered"></span>; Coordinates: <span id="coord"></span> </p>
         <p style="margin-bottom: 0px;">Click or tap the injured area:</p>
     </div>
-    <div id="main-section">
-        <div class="row text-center">
-            <p id="locationReadout" class="no-margin capitalize">&nbsp</p>
-            <div id="tier1diagram">
-                <map name="primary">
-                    <area class="diagramSection" id="head" shape="poly" coords="120,20,93,35,101,92,138,92,146,58,140,29,120,20">
-                    <area class="diagramSection" id="torso" shape="poly" coords="104,90,75,101,80,163,73,267,165,269,156,205,162,97,136,90,104,90">
-                    <area class="diagramSection" id="arm1" shape="poly" coords="80,101,79,168,55,255,61,296,19,285,36,255,61,113,76,101,80,101">
-                    <area class="diagramSection" id="arm2" shape="poly" coords="162,98,161,162,183,254,182,298,221,291,201,251,177,114,170,102,162,98">
-                    <area class="diagramSection" id="leg" shape="poly" coords="73,270,92,459,77,500,107,500,121,475,141,500,161,485,145,488,167,270,73,270">
-                </map>
-                <img usemap="#primary" id="bodyDiagram"  src="img/diagram/default.png" alt="image">
-            </div>
-        </div>
-        <div class="text-center footer">
-            <!--<button class="btn btn-link" onclick="location.href='./chatbot.html'" type="button">Or skip right to the AidBot</button>-->
-            <button id="toggleAidBot" class="btn btn-link" onclick="toggleFooter()" type="button">Open AidBot</button>
-            <div class="chatWindow" id="chatWindow"></div>
-            <div class="chatTextEntry">
-                <textarea id="textEntry" name="text" rows="3" wrap="soft" placeholder="Type message here..."></textarea>
-                <br/>
-                <button class="btn btn-default" id="submitMessage" onclick="getNextResponseAndText();">Submit</button>
-            </div>
+
+    <div class="row text-center">
+        <p id="locationReadout" class="no-margin capitalize">&nbsp</p>
+        <div id="tier1diagram">
+            <map name="primary">
+                <area class="diagramSection" id="head" shape="poly" coords="120,20,93,35,101,92,138,92,146,58,140,29,120,20">
+                <area class="diagramSection" id="torso" shape="poly" coords="104,90,75,101,80,163,73,267,165,269,156,205,162,97,136,90,104,90">
+                <area class="diagramSection" id="arm1" shape="poly" coords="80,101,79,168,55,255,61,296,19,285,36,255,61,113,76,101,80,101">
+                <area class="diagramSection" id="arm2" shape="poly" coords="162,98,161,162,183,254,182,298,221,291,201,251,177,114,170,102,162,98">
+                <area class="diagramSection" id="leg" shape="poly" coords="73,270,92,459,77,500,107,500,121,475,141,500,161,485,145,488,167,270,73,270">
+            </map>
+            <img usemap="#primary" id="bodyDiagram"  src="img/diagram/default.png" alt="image">
         </div>
     </div>
-
+    <div class="text-center footer">
+        <!--<button class="btn btn-link" onclick="location.href='./chatbot.html'" type="button">Or skip right to the AidBot</button>-->
+        <button id="toggleAidBot" class="btn btn-link" onclick="toggleFooter()" type="button">Open AidBot</button>
+        <div class="chatWindow text-left" id="chatWindow"></div>
+        <div class="chatTextEntry">
+            <textarea id="textEntry" name="text" rows="3" wrap="soft" placeholder="Type message here..."></textarea>
+            <br/>
+            <button class="btn btn-default" id="submitMessage" onclick="getNextResponseAndText();">Submit</button>
+        </div>
+    </div>
 </div>
 
 <!-- Begin scripts -->
@@ -71,9 +81,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script type="text/javascript" src="./js/imageMapResizer.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
-
-
-
 
 </body>
 </html>

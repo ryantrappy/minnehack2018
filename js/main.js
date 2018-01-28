@@ -26,6 +26,7 @@ $( document ).ready(function() {
             $("#locationReadout").html("Selected: " + diagramSection);
             $("#bodyDiagram").attr("src", imgName);
             getNextResponse(diagramSection);
+
             setTimeout(function(){
                 toggleFooter();
                 document.getElementById("textEntry").focus();
@@ -36,7 +37,22 @@ $( document ).ready(function() {
             var imgName = "./img/diagram/default.png";
             $("#locationReadout").html("&nbsp");
             $("#bodyDiagram").attr("src", imgName);
-        });
+        }
+    );
+
+    /* A simple and scalable hamburger menu using css transitions. */
+
+    $('.js-menu').on('click', function() {
+        if ($('.js-menu').hasClass('active')) {
+            $('.js-menu').removeClass('active');
+            $('body').removeClass('menu-open');
+        } else {
+            $('.js-menu').addClass('active');
+            $('body').addClass('menu-open');
+        }
+
+        isActive = !isActive;
+    });
 
 });
 
@@ -47,6 +63,9 @@ function toggleFooter(){
     }else{
         $("#toggleAidBot").html("Close AidBot");
         $(".footer").addClass("expanded").css("height", "90%");
+        $('.js-menu').removeClass('active');
+        $('body').removeClass('menu-open');
+        isActive = !isActive;
     }
 
 }
