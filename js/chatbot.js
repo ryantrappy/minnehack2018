@@ -70,6 +70,7 @@ function getActionFromMongo(action){
             console.log("Data: " + data + "\nStatus: " + status);
             console.log(data);
             var textToAdd = '<div class=\"message from\">';
+            textToAdd += "According to my data, I believe you have a " + data.actionName + ". Steps to treat this are:<br><br>";
             for(var i=0; i < Object.keys(data.action).length; i++){
                      textToAdd+= (i+1) + ". " + data.action["action"+i] + "<br>"
             }
