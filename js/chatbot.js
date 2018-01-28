@@ -38,3 +38,5 @@ function getNextResponseAndText(){
     }
 
 }
+
+getFirstResponse();
