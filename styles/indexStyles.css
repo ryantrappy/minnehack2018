@@ -56,3 +56,7 @@ li > a{
     color: #ffffff;
     text-decoration: underline;
 }
+
+.disclaimer{
+    margin: 10px;
+}

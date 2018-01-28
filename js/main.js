@@ -44,6 +44,7 @@ $( document ).ready(function() {
 
             });
     }
+    $("#video").hide();
 
     $("#textEntry").keydown(function (e) {
         var code = (e.keyCode ? e.keyCode : e.which);
@@ -166,12 +167,11 @@ function getActionFromMongo(action){
 }
 function startVideoCall(){
     console.log("starting call");
-//    <iframe
-//     src="https://tokbox.com/embed/embed/ot-embed.js?embedId=c719fa0c-2b2e-4cb0-bfdb-771a48cddf00&room=DEFAULT_ROOM&iframe=true"
-//     width="375px"
-    // height="600px"
-    // allow="microphone; camera"
-        // ></iframe>
+    $("#video").show();
+    $("#chat").hide();
+    toggleFooter();
+
+
 }
 
 function updateScroll(){
