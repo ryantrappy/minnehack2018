@@ -22,15 +22,22 @@
 }
 
 .chatWindow{
-    border: solid grey 1px;
-    margin:auto;
-    width: 45vw;
-    height: 75vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    width: 90%;
+    height: 50%;
     overflow: scroll;
+    background-color: #ffffff;
 }
 .chatTextEntry{
-    width: 45vw;
+    width: 90%;
     margin: auto;
+}
+#textEntry{
+    overflow:hidden;
+    resize:none;
+    width: 90%;
 }
 
 input.break {

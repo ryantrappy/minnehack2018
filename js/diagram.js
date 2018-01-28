@@ -38,3 +38,14 @@ $( document ).ready(function() {
         $("#coord").html("X: " + relX + " Y: " + relY);
     });
 });
+
+function toggleFooter(){
+    if($(".footer").hasClass("expanded")){
+        $("#toggleAidBot").html("Open AidBot");
+        $(".footer").removeClass("expanded").css("height", "30px");
+    }else{
+        $("#toggleAidBot").html("Close AidBot");
+        $(".footer").addClass("expanded").css("height", "90%");
+    }
+
+}
