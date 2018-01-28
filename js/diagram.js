@@ -18,7 +18,7 @@ $( document ).ready(function() {
             $("#bodyDiagram").attr("src", imgName);
         });
 
-    
+
     $("#bodyDiagram").click(function (e) {
         var parentOffset = $(this).parent().offset();
         //or $(this).offset(); if you really just want the current element's offset
