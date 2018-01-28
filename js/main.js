@@ -144,15 +144,28 @@ function getActionFromMongo(action){
         function(data,status){
             console.log("Data: " + data + "\nStatus: " + status);
             console.log(data);
+
             var textToAdd = '<div class=\"message from\">';
+
             textToAdd += "According to my data, I believe you have a " + data.actionName + ". Steps to treat this are:<br><br>";
             for(var i=0; i < Object.keys(data.action).length; i++){
                 textToAdd+= (i+1) + ". " + data.action["action"+i] + "<br>"
+            }
+            if(data.severity != null){
+                if(data.severity == 1){
+                    console.log("severe, suggest a videochat");
+                    textToAdd += "<br> This particular injury is one that is severe enough " +
+                        "to warrant immediate contact with a nurse you may click this button to start one <br>"
+                    textToAdd += "            <button class=\"btn btn-default\" id=\"startVideoCall\" onclick=\"startVideoCall();\">Start call</button>\n"
+                }
             }
             textToAdd +="</div>";
             $(".chatWindow").append(textToAdd);
             updateScroll();
         });
+}
+function startVideoCall(){
+    console.log("starting call");
 }
 
 function updateScroll(){
