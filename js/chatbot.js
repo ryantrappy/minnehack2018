@@ -11,7 +11,6 @@ $( document ).ready(function() {
             return true;
         }
     });
-
 })
 
 function getNextResponse(text){
@@ -32,8 +31,10 @@ function getNextResponse(text){
                         '<div class=\"message from\">' + data.fulfillmentText + "</div>"
                     )
                 }
+                updateScroll();
                 // return data;
             });
+    updateScroll();
     }
 function getFirstResponse(){
     console.log("calling");
@@ -45,6 +46,7 @@ function getFirstResponse(){
                 '<div class=\"message from\">' + data.fulfillmentText + "</div>"
             )
             // return data;
+            updateScroll();
         });
 }
 
@@ -57,7 +59,7 @@ function getNextResponseAndText(){
     }
     $("#textEntry").val('');
     $("#textEntry").focus();
-
+    updateScroll();
 }
 
 getFirstResponse();
@@ -76,5 +78,11 @@ function getActionFromMongo(action){
             }
             textToAdd +="</div>";
             $(".chatWindow").append(textToAdd);
+            updateScroll();
         });
+}
+
+function updateScroll(){
+    var element = document.getElementById("chatWindow");
+    element.scrollTop = element.scrollHeight;
 }
