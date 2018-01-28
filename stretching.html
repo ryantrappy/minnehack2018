@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE HTML>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <link rel="apple-touch-icon" sizes="57x57" href="favicon.ico/apple-icon-57x57.png">
+            <link rel="apple-touch-icon" sizes="60x60" href="favicon.ico/apple-icon-60x60.png">
+            <link rel="apple-touch-icon" sizes="72x72" href="favicon.ico/apple-icon-72x72.png">
+            <link rel="apple-touch-icon" sizes="76x76" href="favicon.ico/apple-icon-76x76.png">
+            <link rel="apple-touch-icon" sizes="114x114" href="favicon.ico/apple-icon-114x114.png">
+            <link rel="apple-touch-icon" sizes="120x120" href="favicon.ico/apple-icon-120x120.png">
+            <link rel="apple-touch-icon" sizes="144x144" href="favicon.ico/apple-icon-144x144.png">
+            <link rel="apple-touch-icon" sizes="152x152" href="favicon.ico/apple-icon-152x152.png">
+            <link rel="apple-touch-icon" sizes="180x180" href="favicon.ico/apple-icon-180x180.png">
+            <link rel="icon" type="image/png" sizes="192x192"  href="favicon.ico/android-icon-192x192.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="96x96" href="favicon.ico/favicon-96x96.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico/favicon-16x16.png">
+            <link rel="manifest" href="favicon.ico/manifest.json">
+            <meta name="msapplication-TileColor" content="#ffffff">
+            <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+            <meta name="theme-color" content="#ffffff">
+
+            <title>QuickAid</title>
+
+            <!-- Begin CSS -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+            <link rel="stylesheet" href="./styles/indexStyles.css">
+            <link rel="stylesheet" href="./styles/chatbot.css">
+            <link rel="stylesheet" href="./styles/hamburger.css">
+        </head>
+<body>
+
+<div class="container-fluid">
+    <div class="row text-center header">
+        <h1 onclick="document.location='index.html'">QuickAid</h1>
+        <button id="hamburger" class="js-menu menu" type="button" onclick="toggleMenu();">
+            <span class="bar"></span>
+        </button>
+
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="commoninjuries.html">Common Injuries</a></li>
+                <li><a href="prevention.html">Prevention Tips</a></li>
+                <li><a href="stretching.html">Post-Injury Stretching</a></li>
+                <li><a href="copyright.html">Copyright + Disclaimer</a></li>
+            </ul>
+        </nav>
+        <h4 class="no-margin">The bot that troubleshoots humans</h4>
+        <p style="display:none">Area hovered: <span id="isHovered"></span>; Coordinates: <span id="coord"></span> </p>
+        <p style="margin-bottom: 0px;">Click or tap the injured area:</p>
+    </div>
+
+    <div class="row">
+        hello world
+    </div>
+    <div class="text-center footer">
+        <!--<button class="btn btn-link" onclick="location.href='./chatbot.html'" type="button">Or skip right to the AidBot</button>-->
+        <button id="toggleAidBot" class="btn btn-link" onclick="toggleFooter()" type="button">Open AidBot</button>
+        <div class="chatWindow text-left" id="chatWindow"></div>
+        <div class="chatTextEntry">
+            <textarea id="textEntry" name="text" rows="3" wrap="soft" placeholder="Type message here..."></textarea>
+            <br/>
+            <button class="btn btn-default" id="submitMessage" onclick="getNextResponseAndText();">Submit</button>
+        </div>
+    </div>
+</div>
+
+<!-- Begin scripts -->
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./js/imageMapResizer.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html></title>
+</head>
+<body>
+
+</body>
+</html>
