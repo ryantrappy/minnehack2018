@@ -1,4 +1,18 @@
+$( document ).ready(function() {
+    $("#textEntry").keydown(function (e) {
+        var code = (e.keyCode ? e.keyCode : e.which);
+        if (code == 13) {
+            let text = $("#textEntry").val();
+            console.log(text);
+            if(text.length > 0){
+                getNextResponse(text);
+            }
+            $("#textEntry").val('')
+            return true;
+        }
+    });
 
+})
 
 function getNextResponse(text){
         $(".chatWindow").append(
@@ -37,11 +51,11 @@ function getFirstResponse(){
 function getNextResponseAndText(){
     console.log("submitting");
     let text = $("#textEntry").val();
-    $("#textEntry").val('')
     console.log(text);
     if(text.length > 0){
         getNextResponse(text);
     }
+    $("#textEntry").val('')
 
 }
 
@@ -54,10 +68,11 @@ function getActionFromMongo(action){
         function(data,status){
             console.log("Data: " + data + "\nStatus: " + status);
             console.log(data);
+            var textToAdd = '<div class=\"message from\">';
             for(var i=0; i < Object.keys(data.action).length; i++){
-                $(".chatWindow").append(
-                    '<div class=\"message from\">' + (i+1) + ". " + data.action["action"+i] + "</div>"
-                )
+                     textToAdd+= (i+1) + ". " + data.action["action"+i] + "<br>"
             }
+            textToAdd +="</div>";
+            $(".chatWindow").append(textToAdd);
         });
 }
