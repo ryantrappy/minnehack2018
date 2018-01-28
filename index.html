@@ -13,9 +13,11 @@
 <body>
 
 <div class="container-fluid">
-    <h1>QuickSports First Aid</h1>
+    <div class="row text-center">
+        <h1>QuickSports First Aid</h1>
+    </div>
+
     <div class="row">
-        <div class="col-6-md">
             <map name="primary">
                 <area class="diagramSection" id="head" shape="poly" coords="134,27,109,38,117,83,121,101,155,101,167,61,157,32,134,27">
                 <area class="diagramSection" id="torso" shape="poly" coords="87,115,96,223,85,302,189,286,180,238,179,115,87,115">
@@ -23,14 +25,12 @@
                 <area class="diagramSection" id="arm2" shape="poly" coords="174,114,183,185,210,333,253,325,200,136,174,114">
                 <area class="diagramSection" id="legs" shape="poly" coords="83,305,109,525,90,562,116,571,134,544,166,571,185,555,170,508,189,313,83,305">
             </map>
-            <img usemap="#primary" id="bodyDiagram" src="img/diagram/default.jpg" alt="image">
-        </div>
-        <div class="col-6-md">
-            <p>Area hovered: <span id="isHovered"></span></p>
-            <p>Coordinates: <span id="coord"></span></p>
-        </div>
-    </div>
+            <img usemap="#primary" id="bodyDiagram"  src="img/diagram/default.jpg" alt="image">
 
+    </div>
+    <div class="row">
+        <p>Area hovered: <span id="isHovered"></span>; Coordinates: <span id="coord"></span> </p>
+    </div>
 </div>
 
 <!-- Begin scripts -->
