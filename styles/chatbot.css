@@ -31,6 +31,9 @@
     overflow: scroll;
     background-color: #ffffff;
 }
+#chat{
+    height: 100%;
+}
 .chatTextEntry{
     width: 90%;
     margin: auto;

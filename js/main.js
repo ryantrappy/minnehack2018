@@ -169,7 +169,7 @@ function startVideoCall(){
     console.log("starting call");
     $("#video").show();
     $("#chat").hide();
-    toggleFooter();
+    //toggleFooter();
 
 
 }
